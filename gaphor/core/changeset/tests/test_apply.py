@@ -1,5 +1,6 @@
 import pytest
 
+from gaphor.core.changeset.apply import ADD, REMOVE, apply_change
 from gaphor.core.modeling import (
     Diagram,
     Element,
@@ -8,7 +9,6 @@ from gaphor.core.modeling import (
     RefChange,
     ValueChange,
 )
-from gaphor.core.modeling.changeset import ADD, REMOVE, apply_change
 
 
 def test_create_element(element_factory, modeling_language):

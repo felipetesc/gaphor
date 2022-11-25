@@ -1,7 +1,8 @@
 import pytest
 
+from gaphor.core.changeset.apply import ADD, REMOVE, UPDATE
+from gaphor.core.changeset.compare import UnmatchableModel, compare
 from gaphor.core.modeling import Diagram, Element, ElementFactory, PendingChange
-from gaphor.storage.changeset import ADD, REMOVE, UPDATE, UnmatchableModel, compare
 
 
 @pytest.fixture

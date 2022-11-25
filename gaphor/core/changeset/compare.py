@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Iterable
 
+from gaphor.core.changeset.apply import ADD, REMOVE, UPDATE
 from gaphor.core.modeling import (
     Element,
     ElementChange,
@@ -9,7 +10,6 @@ from gaphor.core.modeling import (
     RefChange,
     ValueChange,
 )
-from gaphor.core.modeling.changeset import ADD, REMOVE, UPDATE
 from gaphor.core.modeling.collection import collection
 
 
