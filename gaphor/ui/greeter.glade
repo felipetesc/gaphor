@@ -109,7 +109,7 @@
                 <property name="homogeneous">1</property>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">Open Other Model…</property>
+                    <property name="label" translatable="yes">Open Other Model...</property>
                     <property name="visible">1</property>
                     <property name="action-name">app.file-open</property>
                   </object>

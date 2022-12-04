@@ -5,7 +5,7 @@
   <menu id='hamburger-menu'>
     <section>
       <item>
-        <attribute name='label' translatable='yes'>Open Model…</attribute>
+        <attribute name='label' translatable='yes'>Open Model...</attribute>
         <attribute name='action'>app.file-open</attribute>
       </item>
     </section>
@@ -46,7 +46,7 @@
         </child>
         <child>
           <object class="GtkButton">
-            <property name="label" translatable="yes">Open Model…</property>
+            <property name="label" translatable="yes">Open Model...</property>
             <property name="action-name">app.file-open</property>
           </object>
         </child>
