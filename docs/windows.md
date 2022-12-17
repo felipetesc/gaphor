@@ -124,7 +124,7 @@ pipx install gvsbuild
 In the same PowerShell terminal, execute:
 
 ```PowerShell
-gvsbuild build --enable-gi --py-wheel gobject-introspection gtk4 libadwaita gtksourceview5 pygobject pycairo adwaita-icon-theme hicolor-icon-theme
+gvsbuild build --enable-gi gobject-introspection gtk4 libadwaita gtksourceview5 adwaita-icon-theme hicolor-icon-theme
 ```
 Grab a coffee, the build will take a few minutes to complete.
 
@@ -144,8 +144,8 @@ poetry config virtualenvs.in-project true
 ```
 
 In Windows, Pycairo wheels are built using a statically compiled version of
-cairo. This won't work for gaphor, since GTK and Cairo need to be compiled
-dynamically together. To prevent using these wheels, configure poetry to always
+Cairo. This won't work for Gaphor, since GTK and Cairo need to be compiled
+dynamically together. To prevent using these wheels, configure Poetry to always
 build Pycairo and PyGObject from source.
 ```PowerShell
 poetry config --local installer.no-binary pycairo,pygobject
