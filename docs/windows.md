@@ -143,6 +143,14 @@ pipx install poetry
 poetry config virtualenvs.in-project true
 ```
 
+In Windows, Pycairo wheels are built using a statically compiled version of
+cairo. This won't work for gaphor, since GTK and Cairo need to be compiled
+dynamically together. To prevent using these wheels, configure poetry to always
+build Pycairo and PyGObject from source.
+```PowerShell
+poetry config --local installer.no-binary pycairo,pygobject
+```
+
 Add GTK to your environmental variables:
 ```PowerShell
 $env:Path = $env:Path + "C:\gtk-build\gtk\x64\release\bin;"
@@ -156,12 +164,6 @@ PowerShell sessions.
 Install Gaphor's dependencies
 ```PowerShell
 poetry install
-```
-
-Reinstall PyGObject and pycairo using gvsbuild wheels
-```PowerShell
-poetry run pip install --force-reinstall (Resolve-Path C:\gtk-build\build\x64\release\pygobject\dist\PyGObject*.whl)
-poetry run pip install --force-reinstall (Resolve-Path C:\gtk-build\build\x64\release\pycairo\dist\pycairo*.whl)
 ```
 
 Launch Gaphor!
